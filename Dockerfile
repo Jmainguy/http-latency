@@ -1,4 +1,4 @@
-FROM golang:1.12.9
+FROM golang:1.20.3
 WORKDIR /go/src/app
 ADD main.go .
 RUN go get -d -v ./...
