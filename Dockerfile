@@ -1,6 +1,4 @@
-FROM golang:1.22.4
-WORKDIR /go/src/app
-ADD main.go .
-RUN go get -d -v ./...
-RUN go install -v ./...
-CMD ["app"]
+# Dockerfile
+FROM alpine:latest
+COPY http-latency /usr/bin/http-latency
+CMD ["/usr/bin/http-latency"]
