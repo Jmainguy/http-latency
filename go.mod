@@ -1,10 +1,10 @@
 module github.com/jmainguy/http-latency
 
-go 1.23.1
+go 1.25.0
 
 require (
-	github.com/sirupsen/logrus v1.9.4
+	github.com/sirupsen/logrus v1.10.1
 	github.com/tcnksm/go-httpstat v0.2.0
 )
 
-require golang.org/x/sys v0.25.0 // indirect
+require golang.org/x/sys v0.47.0 // indirect

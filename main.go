@@ -29,7 +29,9 @@ func latency(url string, log *logrus.Logger) {
 	if _, err := io.Copy(io.Discard, res.Body); err != nil {
 		log.Fatal(err)
 	}
-	res.Body.Close()
+	if err := res.Body.Close(); err != nil {
+		log.WithError(err).Error("failed to close response body")
+	}
 	log.WithFields(logrus.Fields{
 		"DNSLookup":        result.DNSLookup / time.Millisecond,
 		"TCPConnection":    result.TCPConnection / time.Millisecond,
