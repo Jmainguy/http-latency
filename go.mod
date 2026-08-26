@@ -3,7 +3,7 @@ module github.com/jmainguy/http-latency
 go 1.25.0
 
 require (
-	github.com/sirupsen/logrus v1.10.1
+	github.com/sirupsen/logrus v1.10.2
 	github.com/tcnksm/go-httpstat v0.2.0
 )
 
